@@ -7,5 +7,5 @@ UI linking functionality <br>
 Routing after form submission
 
 USAGE: <br>
-Start local php server
+Start local php server <br>
 Configure the database connection in config/Database.php
