@@ -1,26 +1,28 @@
-// Handle POST
+// Handle Create Client
 function createClientFunction(){
+    // Get the name field
     var x = document.forms["createClientForm"]["name"].value;
+    // Perform validation | Needs improvement
     if(x == ""){
         return;
     }
+    // Instantiate object
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+            // Will provide user feedback after successfull creation | Code has no effect yet
             document.getElementById("demo").innerHTML = this.responseText;
         }
     };
+    // Locate the API endpoint
     xhttp.open("POST", "/controllers/api/clients/create.php", true);
+    // Set the headers
     xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.onreadystatechange = function () {
-        if (xhttp.readyState === 4 && xhttp.status === 200) {
-            var json = JSON.parse(xhttp.responseText);
-        }
-    };
+    
     //serialize form data
     var url = $('form').serialize();
 
-    //function to turn url to an object
+    //function to turn url to a json object
     function getUrlVars(url) {
         var hash;
         var myJson = {};
@@ -33,5 +35,6 @@ function createClientFunction(){
     }
     //pass serialized data to function
     var data = getUrlVars(url);
+    // Send request
     xhttp.send(data);
 }

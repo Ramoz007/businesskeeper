@@ -1,24 +1,26 @@
-// Handle POST
+// Handle Create Contact
 function createContactFunction(){
+    // Get the name, surname and email fields
     var x = document.forms["createContactForm"]["name"].value;
     var y = document.forms["createContactForm"]["surname"].value;
     var z = document.forms["createContactForm"]["email"].value;
+    // Perform validation | Needs improvement
     if(x == "" || y == "" || z == ""){
         return;
     }
+    // Instantiate object
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+            // Will provide user feedback after successfull creation | Code has no effect yet
             document.getElementById("demo").innerHTML = this.responseText;
         }
     };
+    // Locate the API endpoint
     xhttp.open("POST", "/controllers/api/contacts/create.php", true);
+    // Set the headers
     xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.onreadystatechange = function () {
-        if (xhttp.readyState === 4 && xhttp.status === 200) {
-            var json = JSON.parse(xhttp.responseText);
-        }
-    };
+    
     //serialize form data
     var url = $('form').serialize();
 
@@ -35,5 +37,6 @@ function createContactFunction(){
     }
     //pass serialized data to function
     var data = getUrlVars(url);
+    // Send request
     xhttp.send(data);
 }

@@ -14,11 +14,9 @@
             <button type="button" id="linkContactBtn" class="btn btn-success" style="border-radius: 15px">+ Link Contact</button>
         </div>
     </div>
-
     <div id="General" class="tabcontent">
         <p id="clientsLoadHere" class="message box"></p>
     </div>
-
     <div id="Contacts" class="tabcontent">
         <p id="clientContactsLoadHere">Please select a Client first!!!</p>
     </div>

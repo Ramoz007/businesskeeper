@@ -1,5 +1,5 @@
 <?php
-
+  // This API endpoint needs checks to ensure it has origin and access control
   // Headers
   header('Access-Control-Allow-Origin: *');
   header('Content-Type: application/json');

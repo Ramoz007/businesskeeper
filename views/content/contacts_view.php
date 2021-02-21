@@ -12,15 +12,12 @@
             <button type="button" id="linkClientBtn" class="btn btn-success" style="border-radius: 15px">+ Link Client</button>
         </div>
     </div>
-
     <div id="General" class="tabcontent">
         <p id="contactsLoadHere" class="message box"></p>
     </div>
-
     <div id="Clients" class="tabcontent">
         <p id="contactClientsLoadHere">Please select a Contact first!!!</p>
     </div>
-
 </div>
 
 <?php include 'includes/contact_modals_view.php'; ?>

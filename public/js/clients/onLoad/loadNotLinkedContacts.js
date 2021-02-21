@@ -1,11 +1,20 @@
+// Load all the Contacts available to be linked to Client
 function loadNotLinkedContact(id){
+    // Instantiate object
     var reqLink;
     reqLink=new XMLHttpRequest();
+
+    // Locate the API endpoint
     reqLink.open("GET", '/controllers/api/clients/read_not_contacts.php?id='+id,true);
+    // Send request
     reqLink.send();
+
+    // On load get the response and display output
     reqLink.onload=function(){
         var jsonBlob=JSON.parse(reqLink.responseText);
+        // Value for HTML document
         var html = "";
+        // Render Table Headings and Rows with data requested
         if(jsonBlob.data.length > 0){
             html+=`<div class="flex-row d-flex" style="border-bottom: 1px solid #C8C8C8; height: 30px">
         <div class="flex-row d-flex">
@@ -27,11 +36,12 @@ function loadNotLinkedContact(id){
         </div>`;
             }
         }
+        // Provide feedback to user if there's no results
         else {
             html += jsonBlob[0].message;
         }
 
-        //append in message class
+        // Display to the browser
         document.getElementById("availableContactsLoadHere").innerHTML=html;
     };
 }

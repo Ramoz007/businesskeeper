@@ -8,7 +8,6 @@
                 </button>
             </div>
             <div class="modal-body">
-
                 <form name="createContactForm" class="needs-validation" novalidate>
                     <div class="form-group">
                         <label for="validationCustom01">Name:</label>
