@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="98b7c6b5-298f-4c60-b6f0-91c0264634bf" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ohvVH2bebwdIVD0Oqbjnn5abv3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js/contacts/onLoad" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\views\errors" />
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\views\content" />
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\public\js\contacts" />
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\public\js\clients" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\public\js\contacts\onLoad" />
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\views" />
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\controllers\api\clients" />
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\controllers\api\contacts" />
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\models" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98b7c6b5-298f-4c60-b6f0-91c0264634bf" name="Default Changelist" comment="" />
+      <created>1613751658551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613751658551</updated>
+      <workItem from="1613751659601" duration="94954000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="281" y="-902" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613803882530">
+      <screen x="-271" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="281" y="-902" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-271.-1080.1920.1040@-271.-1080.1920.1040" timestamp="1613803882530" />
+    <state x="395" y="-1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613800606296">
+      <screen x="-271" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="395" y="-1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/-271.-1080.1920.1040@-271.-1080.1920.1040" timestamp="1613800606296" />
+    <state x="469" y="-805" key="FileChooserDialogImpl" timestamp="1613797333961">
+      <screen x="-271" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="469" y="-805" key="FileChooserDialogImpl/0.0.1366.728/-271.-1080.1920.1040@-271.-1080.1920.1040" timestamp="1613797333961" />
+    <state x="420" y="87" key="NewPhpClassDialog" timestamp="1613753762798">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="420" y="87" key="NewPhpClassDialog/0.0.1366.728/-271.-1080.1920.1040@0.0.1366.728" timestamp="1613753762798" />
+    <state x="456" y="-670" key="NewPhpFileDialog" timestamp="1613930264608">
+      <screen x="-271" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="456" y="-670" key="NewPhpFileDialog/0.0.1366.728/-271.-1080.1920.1040@-271.-1080.1920.1040" timestamp="1613930264608" />
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/-271.-1080.1920.1040@0.0.1366.728" timestamp="1613753450302" />
+    <state x="345" y="-299" key="run.anything.popup" timestamp="1613760932393">
+      <screen x="-271" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="345" y="-299" key="run.anything.popup/0.0.1366.728/-271.-1080.1920.1040@-271.-1080.1920.1040" timestamp="1613760932393" />
+    <state x="352" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1613931145622">
+      <screen x="-271" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="352" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-271.-1080.1920.1040@-271.-1080.1920.1040" timestamp="1613931145622" />
+  </component>
+</project>
