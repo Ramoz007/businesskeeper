@@ -1,4 +1,5 @@
-<?php 
+<?php
+
   // Headers
   header('Access-Control-Allow-Origin: *');
   header('Content-Type: application/json');
@@ -20,30 +21,26 @@
 
   // Check if any contacts
   if($num > 0) {
-    // Contacts array
+    $contact_arr = array();
     $contacts_arr['data'] = array();
 
+    // For all the rows
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);
-
       $contact_item = array(
           'id' => $id,
           'name' => $name,
           'surname' => $surname,
           'email' => $email,
       );
-
-      // Push to "data"
       array_push($contacts_arr['data'], $contact_item);
     }
-
-    // Turn to JSON & output
     echo json_encode($contacts_arr);
-
-  } else {
+  } 
+  // No Contacts
+  else {
       $contact_arr = array();
       $contact_arr['data'] = array();
       array_push($contact_arr, array('message' => 'No Contact(s) Found'));
-      // No Clients
       echo json_encode($contact_arr);
   }

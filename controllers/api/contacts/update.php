@@ -12,13 +12,14 @@
   $database = new Database();
   $db = $database->connect();
 
-  // Instantiate blog post object
+  // Instantiate contact object
   $contact = new Contact($db);
 
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
   // Set ID to update
+  // Sanitizing needed
   $contact->name = $data->name;
   $contact->surname = $data->surname;
   $contact->email = $data->email;

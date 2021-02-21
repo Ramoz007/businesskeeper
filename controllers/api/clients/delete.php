@@ -1,4 +1,5 @@
 <?php
+
   // Headers
   header('Access-Control-Allow-Origin: *');
   header('Content-Type: application/json');
@@ -18,10 +19,10 @@
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
-  // Set ID to UPDATE
+  // Set ID to DELETE
   $client->id = $data->id;
 
-  // Delete client
+  // Delete Client
   if($client->delete()) {
     echo json_encode(
       array('message' => 'Client deleted')

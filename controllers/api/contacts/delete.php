@@ -1,4 +1,5 @@
-<?php 
+<?php
+
   // Headers
   header('Access-Control-Allow-Origin: *');
   header('Content-Type: application/json');
@@ -18,10 +19,10 @@
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
-  // Set ID to update
+  // Set ID to DELETE
   $contact->id = $data->id;
 
-  // Delete post
+  // Delete Contact
   if($contact->delete()) {
     echo json_encode(
       array('message' => 'Contact Deleted')

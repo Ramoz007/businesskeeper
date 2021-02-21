@@ -1,4 +1,5 @@
 <?php
+
   // Headers
   header('Access-Control-Allow-Origin: *');
   header('Content-Type: application/json');
@@ -19,15 +20,16 @@
   $data = json_decode(file_get_contents("php://input"));
 
   // Set ID to UPDATE
+  // Sanitizing needed
   $client->name = $data->name;
 
-  // Update post
+  // Update Client
   if($client->update()) {
     echo json_encode(
-      array('message' => 'Contact Updated')
+      array('message' => 'Client Updated')
     );
   } else {
     echo json_encode(
-      array('message' => 'Contact not updated')
+      array('message' => 'Client not updated')
     );
   }

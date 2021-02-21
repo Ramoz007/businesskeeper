@@ -1,4 +1,5 @@
 <?php
+
   // Headers
   header('Access-Control-Allow-Origin: *');
   header('Content-Type: application/json');
@@ -22,14 +23,15 @@
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
-  //  $name = "Liberty Sunde Inter";
+  // Perform sanitation
   $inputName = urldecode($data->name);
-  $client->name = $inputName;
   $inputName = htmlspecialchars(strip_tags($inputName));
+
+  // Assign values to object members
+  $client->name = $inputName;
   $client->code = $codegen->userInput($inputName);
 
-
-  // Create Contact
+  // Create Client
   if($client->create()) {
     echo json_encode(
       array('message' => 'Client Created')

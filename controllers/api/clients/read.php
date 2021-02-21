@@ -1,4 +1,5 @@
 <?php 
+
   // Headers
   header('Access-Control-Allow-Origin: *');
   header('Content-Type: application/json');
@@ -21,30 +22,25 @@
 
   // Check if any client
   if($num > 0) {
-        // Cat array
-        $client_arr = array();
-        $client_arr['data'] = array();
-
-        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-          extract($row);
-
-          $client_item = array(
-              'id' => $id,
-              'name' => $name,
-              'code' => $code
-          );
-
-          // Push to "data"
-          array_push($client_arr['data'], $client_item);
-        }
-
-        // Turn to JSON & output
-        echo json_encode($client_arr);
-
-  } else {
+    $client_arr = array();
+    $client_arr['data'] = array();
+      
+    // For all the rows
+    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        extract($row);
+        $client_item = array(
+            'id' => $id,
+            'name' => $name,
+            'code' => $code
+        );
+        array_push($client_arr['data'], $client_item);
+    }
+    echo json_encode($client_arr);
+  }
+  // No Clients
+  else {
         $client_arr = array();
         $client_arr['data'] = array();
         array_push($client_arr, array('message' => 'No Client(s) Found'));
-        // No Clients
         echo json_encode($client_arr);
   }

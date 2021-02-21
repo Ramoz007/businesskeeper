@@ -1,4 +1,5 @@
-<?php 
+<?php
+
   // Headers
   header('Access-Control-Allow-Origin: *');
   header('Content-Type: application/json');
@@ -18,15 +19,20 @@
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
+  // Perform sanitation
   $nameInput = urldecode($data->name);
+  $inputName = htmlspecialchars(strip_tags($inputName));
   $surnameInput = urldecode($data->surname);
+  $surnameInput = htmlspecialchars(strip_tags($surnameInput));
   $emailInput = urldecode($data->email);
+  $emailInput = htmlspecialchars(strip_tags($emailInput));
 
+  // Assign values to object members
   $contact->name = $nameInput;
   $contact->surname = $surnameInput;
   $contact->email = $emailInput;
 
-  // Create contact
+  // Create Contact
   if($contact->create()) {
     echo json_encode(
       array('message' => 'Contact Created')

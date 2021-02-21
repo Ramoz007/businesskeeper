@@ -1,47 +1,49 @@
 <?php
 
-// Headers
-header('Access-Control-Allow-Origin: *');
-header('Content-Type: application/json');
+	// Headers
+	header('Access-Control-Allow-Origin: *');
+	header('Content-Type: application/json');
 
-include_once '../../../config/Database.php';
-include_once '../../../models/Client_Contact.php';
+	include_once '../../../config/Database.php';
+	include_once '../../../models/Client_Contact.php';
 
-// Instantiate DB & connect
-$database = new Database();
-$db = $database->connect();
-// Instantiate blog category object
-$client_contact = new Client_Contact($db);
+	// Instantiate DB & connect
+	$database = new Database();
+	$db = $database->connect();
 
-// Get ID
-$client_contact->client_id = isset($_GET['id']) ? $_GET['id'] : die();
+	// Instantiate client_contact object
+	$client_contact = new Client_Contact($db);
 
-// Get client's contacts
-$result = $client_contact->read_not_contacts();
+	// Get ID
+	$client_contact->client_id = isset($_GET['id']) ? $_GET['id'] : die();
 
-$num = $result->rowCount();
+	// Get client's contacts
+	$result = $client_contact->read_not_contacts();
 
-if($num > 0){
-    $client_contact_arr = array();
-    $client_contact_arr['data'] = array();
+	// Get the row count
+	$num = $result->rowCount();
 
-    while($row = $result->fetch(PDO::FETCH_ASSOC)){
-        extract($row);
+	// Add data to an array and encode
+	if($num > 0){
+			$client_contact_arr = array();
+			$client_contact_arr['data'] = array();
 
-        $client_contact_item = array(
-            'name' => $name,
-            'surname' => $surname,
-            'email' => $email
-        );
-
-        array_push($client_contact_arr['data'], $client_contact_item);
-    }
-    echo json_encode($client_contact_arr);
-}
-else{
-    $client_contact_arr = array();
-    $client_contact_arr['data'] = array();
-    array_push($client_contact_arr, array('message' => 'The Client has links to all available contacts.'));
-    // No Clients
-    echo json_encode($client_contact_arr);
-}
+			// For all the rows
+			while($row = $result->fetch(PDO::FETCH_ASSOC)){
+					extract($row);
+					$client_contact_item = array(
+							'name' => $name,
+							'surname' => $surname,
+							'email' => $email
+					);
+					array_push($client_contact_arr['data'], $client_contact_item);
+			}
+			echo json_encode($client_contact_arr);
+	}
+	// No Contacts for the Client to add
+	else{
+			$client_contact_arr = array();
+			$client_contact_arr['data'] = array();
+			array_push($client_contact_arr, array('message' => 'The Client has links to all available contacts.'));
+			echo json_encode($client_contact_arr);
+	}

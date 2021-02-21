@@ -10,6 +10,7 @@
   // Instantiate DB & connect
   $database = new Database();
   $db = $database->connect();
+  
   // Instantiate client_contact object
   $client_contact = new Client_Contact($db);
 

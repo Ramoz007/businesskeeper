@@ -1,6 +1,6 @@
 <?php
 
-  class Client_Contact {
+class Client_Contact {
     // DB Stuff
     private $conn;
     private $client_table = 'clients';
@@ -38,16 +38,14 @@
 
     //Prepare statement
     $stmt = $this->conn->prepare($query);
-
     // Bind ID
     $stmt->bindParam(1, $this->client_id);
-
     // Execute query
     $stmt->execute();
-
     return $stmt;
   }
-  // Get Client's contacts
+
+  // Get Client's available contacts
   public function read_not_contacts(){
     // Create query
     $query = 'SELECT
@@ -69,13 +67,10 @@
 
     //Prepare statement
     $stmt = $this->conn->prepare($query);
-
     // Bind ID
     $stmt->bindParam(1, $this->client_id);
-
     // Execute query
     $stmt->execute();
-
     return $stmt;
   }
 
@@ -100,17 +95,14 @@
 
     //Prepare statement
     $stmt = $this->conn->prepare($query);
-
     // Bind ID
     $stmt->bindParam(1, $this->contact_id);
-
     // Execute query
     $stmt->execute();
-
     return $stmt;
   }
 
-  // Get Contact's clients
+  // Get Contact's available clients
   public function read_not_clients(){
     // Create query
     $query = 'SELECT
@@ -131,13 +123,10 @@
 
     //Prepare statement
     $stmt = $this->conn->prepare($query);
-
     // Bind ID
     $stmt->bindParam(1, $this->contact_id);
-
     // Execute query
     $stmt->execute();
-
     return $stmt;
   }
 
@@ -152,19 +141,15 @@
 
     // Prepare Statement
     $stmt = $this->conn->prepare($query);
-
     // Bind data
     $stmt-> bindParam(':client_id', $this->client_id);
     $stmt-> bindParam(':contact_id', $this->contact_id);
-
     // Execute query
     if($stmt->execute()) {
       return true;
     }
-
     // Print error if something goes wrong
     printf("Error: $s.\n", $stmt->error);
-
     return false;
   }
 
@@ -175,19 +160,15 @@
 
     // Prepare Statement
     $stmt = $this->conn->prepare($query);
-
     // Bind Data
     $stmt-> bindParam(':contact_id', $this->contact_id);
     $stmt-> bindParam(':client_id', $this->client_id);
-
     // Execute query
     if($stmt->execute()) {
       return true;
     }
-
     // Print error if something goes wrong
     printf("Error: $s.\n", $stmt->error);
-
     return false;
     }
   }
