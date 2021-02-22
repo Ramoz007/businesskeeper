@@ -11,7 +11,7 @@ function createClientFunction(){
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // Will provide user feedback after successfull creation | Code has no effect yet
-            document.getElementById("demo").innerHTML = this.responseText;
+            window.location.replace("/public/clients");
         }
     };
     // Locate the API endpoint

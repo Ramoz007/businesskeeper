@@ -20,6 +20,7 @@ class Client_Contact {
   public function read_contacts(){
     // Create query
     $query = 'SELECT
+       co.id,
       co.name,
       co.surname,
       co.email
@@ -78,6 +79,7 @@ class Client_Contact {
   public function read_clients(){
     // Create query
     $query = 'SELECT
+       cl.id,
       cl.name,
       cl.code
       FROM
@@ -105,19 +107,16 @@ class Client_Contact {
   // Get Contact's available clients
   public function read_not_clients(){
     // Create query
-    $query = 'SELECT
+      $query = 'SELECT
       cl.name,
       cl.code
       FROM
         ' . $this->client_table . '
         cl
-      INNER JOIN ' . $this->interm_table . '
-        im
+      INNER JOIN ( SELECT * FROM ' . $this->interm_table . '
+        imi 
+      WHERE imi.contact_id != ? ) as im
       ON cl.id = im.client_id
-      INNER JOIN ' . $this->contact_table . '
-        co
-      ON co.id = im.contact_id
-      WHERE co.id != ?
       ORDER BY
         name ASC';
 

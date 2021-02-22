@@ -5,7 +5,7 @@ function loadNotLinkedClient(id) {
     reqLinks = new XMLHttpRequest();
 
     // Locate the API endpoint
-    reqLinks.open("GET", '/controllers/api/contacts/read_not_clients.php?id=' +id, true);
+    reqLinks.open("GET", '/controllers/api/contacts/read_not_clients.php?id='+id, true);
     // Send request
     reqLinks.send();
 

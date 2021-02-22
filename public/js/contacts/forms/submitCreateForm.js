@@ -1,19 +1,29 @@
 // Handle Create Contact
 function createContactFunction(){
+    // Regex for email standards
+    var emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
     // Get the name, surname and email fields
     var x = document.forms["createContactForm"]["name"].value;
     var y = document.forms["createContactForm"]["surname"].value;
     var z = document.forms["createContactForm"]["email"].value;
     // Perform validation | Needs improvement
-    if(x == "" || y == "" || z == ""){
+    if(x == "" || y == ""){
         return;
     }
+    // Perform validation on email field
+    if(z.match(emailFormat)){
+        // Perform no action
+    }else{
+        return;
+    }
+
     // Instantiate object
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             // Will provide user feedback after successfull creation | Code has no effect yet
-            document.getElementById("demo").innerHTML = this.responseText;
+            window.location.replace("/public/contacts");
         }
     };
     // Locate the API endpoint

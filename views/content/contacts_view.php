@@ -26,6 +26,7 @@
 <script type="text/javascript" src="js/contacts/handleLinkToClient.js"></script>
 <script type="text/javascript" src="js/contacts/onLoad/loadContacts.js"></script>
 <script type="text/javascript" src="js/contacts/onLoad/loadLinkedClients.js"></script>
+<script type="text/javascript" src="js/contacts/onLoad/loadNotLinkedClients.js"></script>
 <script type="text/javascript" src="js/contacts/forms/submitCreateForm.js"></script>
 <script>
     function changeTabs(evt, tabName) {

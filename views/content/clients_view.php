@@ -28,6 +28,7 @@
 <script type="text/javascript" src="js/clients/handleLinkToContact.js"></script>
 <script type="text/javascript" src="js/clients/onLoad/loadClients.js"></script>
 <script type="text/javascript" src="js/clients/onLoad/loadLinkedContacts.js"></script>
+<script type="text/javascript" src="js/clients/onLoad/loadNotLinkedContacts.js"></script>
 <script type="text/javascript" src="js/clients/forms/submitCreateForm.js"></script>
 <script>
     function changeTabs(evt, tabName) {
@@ -45,7 +46,6 @@
 
         if(tabName === "Contacts"){
             document.getElementById("linkContactBtn").style.display = "block";
-            loadClientContactView();
         }else {
             document.getElementById("linkContactBtn").style.display = "none";
         }

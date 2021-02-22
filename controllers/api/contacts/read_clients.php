@@ -32,6 +32,7 @@
 			while($row = $result->fetch(PDO::FETCH_ASSOC)){
 					extract($row);
 					$client_contact_item = array(
+					        'id' => $id,
 							'name' => $name,
 							'code' => $code
 					);

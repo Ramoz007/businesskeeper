@@ -1,5 +1,6 @@
 // Load all the Contact's Clients
-function loadLinkedClient(id) {
+// Receives with selected contact ID
+function loadLinkedClient(contact_id) {
     //loadNotLinkedClient(id); | TODO: function needs proper call
 
     // Instantiate object
@@ -7,7 +8,7 @@ function loadLinkedClient(id) {
     reqLinks = new XMLHttpRequest();
 
     // Locate the API endpoint
-    reqLinks.open("GET", '/controllers/api/contacts/read_clients.php?id=' +id, true);
+    reqLinks.open("GET", '/controllers/api/contacts/read_clients.php?id=' +contact_id, true);
     // Send request
     reqLinks.send();
 
@@ -29,7 +30,7 @@ function loadLinkedClient(id) {
                     <div class="flex-row d-flex">
                         <div style="width: 150px">${jsonBlob.data[i].name}</div>
                         <div style="width: 150px">${jsonBlob.data[i].code}</div>
-                        <div style="width: 200px; text-align: center;"><a href="#">UNLINK Client</a></div>
+                        <div style="width: 200px; text-align: center;"><a onclick="unlinkClientFunction(${jsonBlob.data[i].id},${contact_id})" href="#">UNLINK Client</a></div>
                     </div>
                 </div>`;
             }
@@ -42,4 +43,14 @@ function loadLinkedClient(id) {
         // Display to the browser
         document.getElementById("contactClientsLoadHere").innerHTML = html;
     };
+}
+
+function unlinkClientFunction(client_id, contact_id){
+
+    // Instantiate object
+    var xxhttp = new XMLHttpRequest();
+    // Locate the API endpoint
+    xxhttp.open("GET", "/controllers/api/contacts/unlink_clients.php?client_id="+client_id+"&contact_id="+contact_id, true);
+    xxhttp.send();
+    window.location.replace("/public/contacts");
 }

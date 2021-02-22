@@ -1,13 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="98b7c6b5-298f-4c60-b6f0-91c0264634bf" name="Default Changelist" comment="" />
+    <list default="true" id="98b7c6b5-298f-4c60-b6f0-91c0264634bf" name="Default Changelist" comment="Email validation and Unlinking objects">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/clients/read_contacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/clients/read_contacts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/contacts/read_clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/contacts/read_clients.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Client_Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Client_Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/clients/forms/submitCreateForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/clients/forms/submitCreateForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/clients/handleUnlinkContact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/clients/onLoad/loadLinkedContacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/clients/onLoad/loadLinkedContacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/contacts/forms/submitCreateForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contacts/forms/submitCreateForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/contacts/handleUnlinkClient.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/contacts/onLoad/loadLinkedClients.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contacts/onLoad/loadLinkedClients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/contacts/onLoad/loadNotLinkedClients.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contacts/onLoad/loadNotLinkedClients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/content/clients_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/content/clients_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/content/contacts_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/content/contacts_view.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -18,7 +51,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ohvVH2bebwdIVD0Oqbjnn5abv3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,18 +75,18 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\views\errors" />
-      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\views\content" />
-      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\public\js\contacts" />
-      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\public\js\clients" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\public\js\contacts\onLoad" />
       <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\views" />
       <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\controllers\api\clients" />
       <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\controllers\api\contacts" />
       <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\views\errors" />
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\views\content" />
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\public\js\contacts" />
+      <recent name="C:\Users\ramot\PhpstormProjects\BusinessKeeper\public\js\clients" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -61,11 +98,27 @@
       <option name="presentableId" value="Default" />
       <updated>1613751658551</updated>
       <workItem from="1613751659601" duration="94954000" />
+      <workItem from="1614007213571" duration="12310000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Email validation and Unlinking objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Email validation and Unlinking objects" />
   </component>
   <component name="WindowStateProjectService">
     <state x="281" y="-902" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613803882530">
