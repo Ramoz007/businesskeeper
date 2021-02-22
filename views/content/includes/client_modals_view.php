@@ -51,4 +51,6 @@
         </div>
     </div>
 </div>
+
+<!-- Handle Javascript UI validation errors and success -->
 <script type="text/javascript" src="js/clients/createFormClient.js"></script>

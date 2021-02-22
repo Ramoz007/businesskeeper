@@ -21,25 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="98b7c6b5-298f-4c60-b6f0-91c0264634bf" name="Default Changelist" comment="Email validation and Unlinking objects">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/api/clients/read_contacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/clients/read_contacts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/api/contacts/read_clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/contacts/read_clients.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Client_Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Client_Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/clients/forms/submitCreateForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/clients/forms/submitCreateForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/clients/handleUnlinkContact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/clients/onLoad/loadLinkedContacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/clients/onLoad/loadLinkedContacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/contacts/forms/submitCreateForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contacts/forms/submitCreateForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/contacts/handleUnlinkClient.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/contacts/onLoad/loadLinkedClients.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contacts/onLoad/loadLinkedClients.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/contacts/onLoad/loadNotLinkedClients.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contacts/onLoad/loadNotLinkedClients.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/content/clients_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/content/clients_view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/content/contacts_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/content/contacts_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/content/includes/client_modals_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/content/includes/client_modals_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/content/includes/contact_modals_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/content/includes/contact_modals_view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -99,6 +91,7 @@
       <updated>1613751658551</updated>
       <workItem from="1613751659601" duration="94954000" />
       <workItem from="1614007213571" duration="12310000" />
+      <workItem from="1614020692629" duration="723000" />
     </task>
     <servers />
   </component>
@@ -115,6 +108,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Email validation and Unlinking objects" />

@@ -22,13 +22,20 @@
 
 <?php include 'includes/contact_modals_view.php'; ?>
 
-<script type="text/javascript" src="js/contacts/handleCreateContact.js"></script>
-<script type="text/javascript" src="js/contacts/handleLinkToClient.js"></script>
+<!-- Handle loading contacts, loading their clients, and unlink clients from the selected contact -->
 <script type="text/javascript" src="js/contacts/onLoad/loadContacts.js"></script>
 <script type="text/javascript" src="js/contacts/onLoad/loadLinkedClients.js"></script>
+
+<!-- Handle loading available clients to link, and linking the client to the selected contact -->
 <script type="text/javascript" src="js/contacts/onLoad/loadNotLinkedClients.js"></script>
+<script type="text/javascript" src="js/contacts/handleLinkToClient.js"></script>
+
+<!-- Handle the displaying of the create modal, and creating the contact -->
+<script type="text/javascript" src="js/contacts/handleCreateContact.js"></script>
 <script type="text/javascript" src="js/contacts/forms/submitCreateForm.js"></script>
+
 <script>
+    //change tabs on user input
     function changeTabs(evt, tabName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
