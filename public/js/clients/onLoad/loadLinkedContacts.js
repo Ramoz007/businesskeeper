@@ -3,6 +3,12 @@
 function loadLinkedContact(client_id){
     loadNotLinkedContact(client_id);
 
+    // Store current client_id to sessionStorage if supported
+    if (typeof(Storage) !== "undefined") {
+        // Store
+        sessionStorage.setItem("current_client_id", client_id);
+    }
+
     // Instantiate object
     var reqLink;
     reqLink=new XMLHttpRequest();

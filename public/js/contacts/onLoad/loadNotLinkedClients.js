@@ -27,7 +27,7 @@ function loadNotLinkedClient(contact_id) {
                 html += `<div class="flex-row d-flex" style="height: 30px; padding: 5px 0px; border-bottom: 1px solid #f0f0f0;">
                     <div class="flex-row d-flex">
                         <div style="width: 50px; padding-left: 15px;">
-                            <input type="radio" name="clientLinkRadios" id="clientLinkRadios">
+                            <input type="radio" onchange="storeClientId(${jsonBlob.data[i].client_id})" name="clientAvailLinkRadios" id="clientAvailLinkRadios">
                         </div>
                         <div style="width: 150px">${jsonBlob.data[i].name}</div>
                         <div style="width: 150px">${jsonBlob.data[i].code}</div>
@@ -43,4 +43,11 @@ function loadNotLinkedClient(contact_id) {
         // Display to the browser
         document.getElementById("availableClientsLoadHere").innerHTML = html;
     };
+}
+
+function storeClientId(client_id){
+    if (typeof(Storage) !== "undefined") {
+        // Store
+        sessionStorage.setItem("contactAddClient", client_id);
+    }
 }

@@ -27,7 +27,7 @@ function loadNotLinkedContact(client_id){
                 html+=`<div class="flex-row d-flex" style="height: 30px; padding: 5px 0px; border-bottom: 1px solid #f0f0f0;">
             <div class="flex-row d-flex">
                 <div style="width: 50px; padding-left: 15px;">
-                    <input type="radio" name="contactLinkRadios" id="contactLinkRadios">
+                    <input type="radio" onchange="storeContactId(${jsonBlob.data[i].contact_id})" name="contactAvailLinkRadios" id="contactAvailLinkRadios">
                 </div>
                 <div style="width: 150px">${jsonBlob.data[i].name} ${jsonBlob.data[i].surname}</div>
                 <div style="width: 150px">${jsonBlob.data[i].email}</div>
@@ -43,4 +43,11 @@ function loadNotLinkedContact(client_id){
         // Display to the browser
         document.getElementById("availableContactsLoadHere").innerHTML=html;
     };
+}
+
+function storeContactId(contact_id){
+    if (typeof(Storage) !== "undefined") {
+        // Store
+        sessionStorage.setItem("clientAddContact", contact_id);
+    }
 }

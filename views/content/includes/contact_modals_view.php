@@ -54,7 +54,7 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Link</button>
+                <button type="button" onclick="return linkClientFunction()" class="btn btn-primary">Link</button>
                 <button type="button" class="btn btn-secondary link_closeBtn" data-dismiss="modal">Close</button>
             </div>
         </div>
@@ -62,4 +62,5 @@
 </div>
 
 <!-- Handle Javascript UI validation errors and success -->
-<script type="text/javascript" src="js/clients/createFormClient.js"></script>
+<script type="text/javascript" src="js/contacts/createFormContact.js"></script>
+<script type="text/javascript" src="js/contacts/forms/submitLinkClientForm.js"></script>

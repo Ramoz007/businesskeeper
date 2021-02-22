@@ -5,6 +5,6 @@
         <br>
         Created by Keanu Ramothibe.
         <br>
-        Version 1.2.5
+        Version 1.9.8
     </p>
 </div>
