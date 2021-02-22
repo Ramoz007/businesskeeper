@@ -14,7 +14,7 @@
   // Instantiate contact object
   $contact = new Contact($db);
 
-  // Contact query
+  // Contact read query
   $result = $contact->read();
   // Get row count
   $num = $result->rowCount();
@@ -28,7 +28,7 @@
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
       extract($row);
       $contact_item = array(
-          'id' => $id,
+          'contact_id' => $contact_id,
           'name' => $name,
           'surname' => $surname,
           'email' => $email,

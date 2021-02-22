@@ -1,11 +1,11 @@
 // Load all the Contacts available to be linked to Client
-function loadNotLinkedContact(id){
+function loadNotLinkedContact(client_id){
     // Instantiate object
     var reqLink;
     reqLink=new XMLHttpRequest();
 
     // Locate the API endpoint
-    reqLink.open("GET", '/controllers/api/clients/read_not_contacts.php?id='+id,true);
+    reqLink.open("GET", '/controllers/api/clients/read_not_contacts.php?client_id='+client_id,true);
     // Send request
     reqLink.send();
 
@@ -27,7 +27,7 @@ function loadNotLinkedContact(id){
                 html+=`<div class="flex-row d-flex" style="height: 30px; padding: 5px 0px; border-bottom: 1px solid #f0f0f0;">
             <div class="flex-row d-flex">
                 <div style="width: 50px; padding-left: 15px;">
-                    <input type="radio" name="contactLinkRadios" id="contactLinkRadios" value="3">
+                    <input type="radio" name="contactLinkRadios" id="contactLinkRadios">
                 </div>
                 <div style="width: 150px">${jsonBlob.data[i].name} ${jsonBlob.data[i].surname}</div>
                 <div style="width: 150px">${jsonBlob.data[i].email}</div>

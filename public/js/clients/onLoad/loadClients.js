@@ -25,7 +25,7 @@ req.onload=function(){
             html+=`<div class="flex-row d-flex" style="height: 30px; padding: 5px 0px; border-bottom: 1px solid #f0f0f0;">
                 <div class="flex-row d-flex">
                     <div style="width: 50px; padding-left: 15px;">
-                        <input type="radio" onchange="loadLinkedContact(${jsonBlob.data[i].id})" name="clientViewRadios" id="clientViewRadios" value="3">
+                        <input type="radio" onchange="loadLinkedContact(${jsonBlob.data[i].client_id})" name="clientViewRadios" id="clientViewRadios" value="3">
                     </div>
                     <div style="width: 150px">${jsonBlob.data[i].name}</div>
                     <div style="width: 150px">${jsonBlob.data[i].code}</div>

@@ -19,11 +19,19 @@
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
+  // Perform sanitation
+  $nameInput = urldecode($data->name);
+  $nameInput = htmlspecialchars(strip_tags($nameInput));
+  $surnameInput = urldecode($data->surname);
+  $surnameInput = htmlspecialchars(strip_tags($surnameInput));
+  $emailInput = urldecode($data->email);
+  $emailInput = htmlspecialchars(strip_tags($emailInput));
+
   // Set ID to update
-  // Sanitizing needed
-  $contact->name = $data->name;
-  $contact->surname = $data->surname;
-  $contact->email = $data->email;
+  $contact->contact_id = isset($_GET['contact_id']) ? $_GET['contact_id'] : die();
+  $contact->name = $nameInput;
+  $contact->surname = $surnameInput;
+  $contact->email = $emailInput;
 
   // Update contact
   if($contact->update()) {

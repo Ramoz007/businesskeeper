@@ -16,11 +16,8 @@
   // Instantiate contact object
   $contact = new Contact($db);
 
-  // Get raw posted data
-  $data = json_decode(file_get_contents("php://input"));
-
   // Set ID to DELETE
-  $contact->id = $data->id;
+  $contact->contact_id = isset($_GET['contact_id']) ? $_GET['contact_id'] : die();
 
   // Delete Contact
   if($contact->delete()) {

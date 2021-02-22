@@ -20,7 +20,7 @@ class Client_Contact {
   public function read_contacts(){
     // Create query
     $query = 'SELECT
-       co.id,
+       co.contact_id,
       co.name,
       co.surname,
       co.email
@@ -29,11 +29,11 @@ class Client_Contact {
         co
       INNER JOIN ' . $this->interm_table . '
         im
-      ON co.id = im.contact_id
+      ON co.contact_id = im.contact_id
       INNER JOIN ' . $this->client_table . '
         cl
-      ON cl.id = im.client_id
-      WHERE cl.id = ?
+      ON cl.client_id = im.client_id
+      WHERE cl.client_id = ?
       ORDER BY
         name ASC';
 
@@ -50,6 +50,7 @@ class Client_Contact {
   public function read_not_contacts(){
     // Create query
     $query = 'SELECT
+       co.contact_id,
       co.name,
       co.surname,
       co.email
@@ -58,11 +59,11 @@ class Client_Contact {
         co
       INNER JOIN ' . $this->interm_table . '
         im
-      ON co.id = im.contact_id
+      ON co.contact_id = im.contact_id
       INNER JOIN ' . $this->client_table . '
         cl
-      ON cl.id = im.client_id
-      WHERE cl.id != ?
+      ON cl.client_id = im.client_id
+      WHERE cl.client_id != ?
       ORDER BY
         name ASC';
 
@@ -79,7 +80,7 @@ class Client_Contact {
   public function read_clients(){
     // Create query
     $query = 'SELECT
-       cl.id,
+       cl.client_id,
       cl.name,
       cl.code
       FROM
@@ -87,11 +88,11 @@ class Client_Contact {
         cl
       INNER JOIN ' . $this->interm_table . '
         im
-      ON cl.id = im.client_id
+      ON cl.client_id = im.client_id
       INNER JOIN ' . $this->contact_table . '
         co
-      ON co.id = im.contact_id
-      WHERE co.id = ?
+      ON co.contact_id = im.contact_id
+      WHERE co.contact_id = ?
       ORDER BY
         name ASC';
 
@@ -108,15 +109,15 @@ class Client_Contact {
   public function read_not_clients(){
     // Create query
       $query = 'SELECT
+       cl.client_id,
       cl.name,
       cl.code
       FROM
         ' . $this->client_table . '
         cl
       INNER JOIN ( SELECT * FROM ' . $this->interm_table . '
-        imi 
-      WHERE imi.contact_id != ? ) as im
-      ON cl.id = im.client_id
+      WHERE contact_id = ? ) as im
+      ON cl.client_id = im.client_id
       ORDER BY
         name ASC';
 

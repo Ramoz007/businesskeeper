@@ -21,7 +21,7 @@
 
   // Perform sanitation
   $nameInput = urldecode($data->name);
-  $inputName = htmlspecialchars(strip_tags($inputName));
+  $nameInput = htmlspecialchars(strip_tags($nameInput));
   $surnameInput = urldecode($data->surname);
   $surnameInput = htmlspecialchars(strip_tags($surnameInput));
   $emailInput = urldecode($data->email);

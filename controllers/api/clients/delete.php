@@ -16,11 +16,8 @@
   // Instantiate client object
   $client = new Client($db);
 
-  // Get raw posted data
-  $data = json_decode(file_get_contents("php://input"));
-
   // Set ID to DELETE
-  $client->id = $data->id;
+  $client->client_id = isset($_GET['client_id']) ? $_GET['client_id'] : die();
 
   // Delete Client
   if($client->delete()) {

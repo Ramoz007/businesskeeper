@@ -7,7 +7,7 @@ class Client {
     private $linked_table = 'contacts';
 
     // Properties
-    public $id;
+    public $client_id;
     public $name;
     public $code;
 
@@ -24,7 +24,7 @@ class Client {
   public function read() {
     // Create query
     $query = 'SELECT
-      id,
+      client_id,
       name,
       code
     FROM
@@ -57,28 +57,6 @@ class Client {
     //Bind Data
       $alphaToBePassed = $this->alphaPart."%";
     $stmt-> bindParam(':alpha', $alphaToBePassed);
-    // Execute query
-    $stmt->execute();
-    return $stmt;
-  }
-
-  // Get Client's contacts
-  public function read_contacts(){
-    // Create query
-    $query = 'SELECT
-      name,
-      surname,
-      emai
-    FROM
-      ' . $this->linked_table . '
-    WHERE id = ?
-    ORDER BY
-      name ASC';
-
-    //Prepare statement
-    $stmt = $this->conn->prepare($query);
-    // Bind ID
-    $stmt->bindParam(1, $this->id);
     // Execute query
     $stmt->execute();
     return $stmt;
@@ -118,14 +96,14 @@ class Client {
     SET
       name = :name,
       WHERE
-      id = :id';
+      client_id = :client_id';
 
     // Prepare Statement
     $stmt = $this->conn->prepare($query);
     // Clean data
     $this->name = htmlspecialchars(strip_tags($this->name));
     // Bind data
-    $stmt-> bindParam(':name', $this->name);
+    $stmt-> bindParam(':client_id', $this->client_id);
     // Execute query
     if($stmt->execute()) {
       return true;
@@ -138,14 +116,14 @@ class Client {
   // Delete Client
   public function delete() {
     // Create query
-    $query = 'DELETE FROM ' . $this->table . ' WHERE id = :id';
+    $query = 'DELETE FROM ' . $this->table . ' WHERE client_id = :client_id';
 
     // Prepare Statement
     $stmt = $this->conn->prepare($query);
     // clean data
-    $this->id = htmlspecialchars(strip_tags($this->id));
+    $this->client_id = htmlspecialchars(strip_tags($this->client_id));
     // Bind Data
-    $stmt-> bindParam(':id', $this->id);
+    $stmt-> bindParam(':client_id', $this->client_id);
     // Execute query
     if($stmt->execute()) {
       return true;

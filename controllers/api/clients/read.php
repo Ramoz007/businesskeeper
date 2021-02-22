@@ -29,7 +29,7 @@
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
         $client_item = array(
-            'id' => $id,
+            'client_id' => $client_id,
             'name' => $name,
             'code' => $code
         );

@@ -15,7 +15,7 @@
 	$client_contact = new Client_Contact($db);
 
 	// Get ID
-	$client_contact->contact_id = isset($_GET['id']) ? $_GET['id'] : die();
+	$client_contact->contact_id = isset($_GET['contact_id']) ? $_GET['contact_id'] : die();
 
 	// Get client's contacts
 	$result = $client_contact->read_clients();
@@ -32,7 +32,7 @@
 			while($row = $result->fetch(PDO::FETCH_ASSOC)){
 					extract($row);
 					$client_contact_item = array(
-					        'id' => $id,
+					        'client_id' => $client_id,
 							'name' => $name,
 							'code' => $code
 					);

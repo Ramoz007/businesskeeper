@@ -6,7 +6,7 @@ class Contact {
   private $table = 'contacts';
 
   // Properties
-  public $id;
+  public $contact_id;
   public $name;
   public $surname;
   public $email;
@@ -20,7 +20,7 @@ class Contact {
   public function read() {
     // Create query
     $query = 'SELECT
-      id,
+      contact_id,
       name,
       surname,
       email
@@ -73,7 +73,7 @@ class Contact {
     SET
       name = :name, surname = :surname, email = :email
     WHERE
-      id = :id';
+      contact_id = :contact_id';
 
     // Prepare Statement
     $stmt = $this->conn->prepare($query);
@@ -82,6 +82,7 @@ class Contact {
     $this->surname = htmlspecialchars(strip_tags($this->surname));
     $this->email = htmlspecialchars(strip_tags($this->email));
     // Bind data
+      $stmt-> bindParam(':contact_id', $this->contact_id);
     $stmt-> bindParam(':name', $this->name);
     $stmt-> bindParam(':surname', $this->surname);
     $stmt-> bindParam(':email', $this->email);
@@ -97,12 +98,12 @@ class Contact {
   // Delete Contact
   public function delete() {
     // Create query
-    $query = 'DELETE FROM ' . $this->table . ' WHERE id = :id';
+    $query = 'DELETE FROM ' . $this->table . ' WHERE contact_id = :contact_id';
 
     // Prepare Statement
     $stmt = $this->conn->prepare($query);
     // Bind Data
-    $stmt-> bindParam(':id', $this->id);
+    $stmt-> bindParam(':contact_id', $this->contact_id);
     // Execute query
     if($stmt->execute()) {
       return true;

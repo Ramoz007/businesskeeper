@@ -8,7 +8,7 @@ function loadLinkedContact(client_id){
     reqLink=new XMLHttpRequest();
 
     // Locate the API endpoint
-    reqLink.open("GET", '/controllers/api/clients/read_contacts.php?id='+client_id,true);
+    reqLink.open("GET", '/controllers/api/clients/read_contacts.php?client_id='+client_id,true);
     // Send request
     reqLink.send();
 
@@ -30,7 +30,7 @@ function loadLinkedContact(client_id){
                 <div class="flex-row d-flex">
                     <div style="width: 150px">${jsonBlob.data[i].name} ${jsonBlob.data[i].surname}</div>
                     <div style="width: 150px">${jsonBlob.data[i].email}</div>
-                    <div style="width: 200px; text-align: center;"><a onclick="unlinkContactFunction(${client_id},${jsonBlob.data[i].id})" href="#">UNLINK Contact</a></div>
+                    <div style="width: 200px; text-align: center;"><a onclick="unlinkContactFunction(${client_id},${jsonBlob.data[i].contact_id})" href="#">UNLINK Contact</a></div>
                 </div>
             </div>`;
             }

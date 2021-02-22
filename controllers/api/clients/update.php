@@ -18,10 +18,13 @@
 
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
+  // Perform sanitation
+  $inputName = urldecode($data->name);
+  $inputName = htmlspecialchars(strip_tags($inputName));
 
   // Set ID to UPDATE
-  // Sanitizing needed
-  $client->name = $data->name;
+  $client->client_id = isset($_GET['client_id']) ? $_GET['client_id'] : die();
+  $client->name = $inputName;
 
   // Update Client
   if($client->update()) {

@@ -21,10 +21,28 @@
   <component name="ChangeListManager">
     <list default="true" id="98b7c6b5-298f-4c60-b6f0-91c0264634bf" name="Default Changelist" comment="Email validation and Unlinking objects">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/content/clients_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/content/clients_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/content/contacts_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/content/contacts_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/content/includes/client_modals_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/content/includes/client_modals_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/content/includes/contact_modals_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/content/includes/contact_modals_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bkeeper.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/bkeeper.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/clients/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/clients/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/clients/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/clients/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/clients/read_contacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/clients/read_contacts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/clients/read_not_contacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/clients/read_not_contacts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/clients/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/clients/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/contacts/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/contacts/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/contacts/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/contacts/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/contacts/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/contacts/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/contacts/read_clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/contacts/read_clients.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/contacts/read_not_clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/contacts/read_not_clients.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api/contacts/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api/contacts/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Client_Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Client_Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/clients/onLoad/loadClients.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/clients/onLoad/loadClients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/clients/onLoad/loadLinkedContacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/clients/onLoad/loadLinkedContacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/clients/onLoad/loadNotLinkedContacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/clients/onLoad/loadNotLinkedContacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/contacts/onLoad/loadContacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contacts/onLoad/loadContacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/contacts/onLoad/loadLinkedClients.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contacts/onLoad/loadLinkedClients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/contacts/onLoad/loadNotLinkedClients.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contacts/onLoad/loadNotLinkedClients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/test.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +110,7 @@
       <workItem from="1613751659601" duration="94954000" />
       <workItem from="1614007213571" duration="12310000" />
       <workItem from="1614020692629" duration="723000" />
+      <workItem from="1614021491918" duration="4518000" />
     </task>
     <servers />
   </component>
@@ -140,9 +159,9 @@
       <screen x="-271" y="-1080" width="1920" height="1040" />
     </state>
     <state x="345" y="-299" key="run.anything.popup/0.0.1366.728/-271.-1080.1920.1040@-271.-1080.1920.1040" timestamp="1613760932393" />
-    <state x="352" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1613931145622">
+    <state x="352" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1614024336266">
       <screen x="-271" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="352" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-271.-1080.1920.1040@-271.-1080.1920.1040" timestamp="1613931145622" />
+    <state x="352" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-271.-1080.1920.1040@-271.-1080.1920.1040" timestamp="1614024336266" />
   </component>
 </project>
