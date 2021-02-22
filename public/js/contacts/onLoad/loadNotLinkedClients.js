@@ -31,7 +31,6 @@ function loadNotLinkedClient(contact_id) {
                         </div>
                         <div style="width: 150px">${jsonBlob.data[i].name}</div>
                         <div style="width: 150px">${jsonBlob.data[i].code}</div>
-                        <div style="width: 200px; text-align: center;"><a href="#">UNLINK Client</a></div>
                     </div>
                 </div>`;
             }

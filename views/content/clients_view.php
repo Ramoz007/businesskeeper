@@ -28,9 +28,10 @@
 <script type="text/javascript" src="js/clients/onLoad/loadClients.js"></script>
 <script type="text/javascript" src="js/clients/onLoad/loadLinkedContacts.js"></script>
 
-<!-- Handle loading available contacts to link, and linking the contact to the selected client -->
-<script type="text/javascript" src="js/clients/onLoad/loadNotLinkedContacts.js"></script>
+<!-- Handle linking the contact to the selected client -->
 <script type="text/javascript" src="js/clients/handleLinkToContact.js"></script>
+<!-- Handle the loading of the available contacts to link -->
+<script type="text/javascript" src="js/clients/onLoad/loadNotLinkedContacts.js"></script>
 
 <!-- Handle the displaying of the create modal, and creating the client -->
 <script type="text/javascript" src="js/clients/handleCreateClient.js"></script>

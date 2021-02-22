@@ -1,7 +1,7 @@
 // Load all the Contact's Clients
 // Receives with selected contact ID
 function loadLinkedClient(contact_id) {
-    //loadNotLinkedClient(id); | TODO: function needs proper call
+    loadNotLinkedClient(contact_id);
 
     // Instantiate object
     var reqLinks;
