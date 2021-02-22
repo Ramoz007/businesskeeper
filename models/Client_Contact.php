@@ -49,7 +49,7 @@ class Client_Contact {
   // Get Client's available contacts
   public function read_not_contacts(){
     // Create query
-    $query = 'SELECT
+      $query = 'SELECT
        co.contact_id,
       co.name,
       co.surname,
@@ -57,13 +57,8 @@ class Client_Contact {
       FROM
         ' . $this->contact_table . '
         co
-      INNER JOIN ' . $this->interm_table . '
-        im
-      ON co.contact_id = im.contact_id
-      INNER JOIN ' . $this->client_table . '
-        cl
-      ON cl.client_id = im.client_id
-      WHERE cl.client_id != ?
+      WHERE co.contact_id NOT IN (SELECT contact_id FROM ' . $this->interm_table . '
+      WHERE client_id = ? )
       ORDER BY
         name ASC';
 
@@ -115,9 +110,8 @@ class Client_Contact {
       FROM
         ' . $this->client_table . '
         cl
-      INNER JOIN ( SELECT * FROM ' . $this->interm_table . '
-      WHERE contact_id = ? ) as im
-      ON cl.client_id = im.client_id
+      WHERE cl.client_id NOT IN (SELECT client_id FROM ' . $this->interm_table . '
+      WHERE contact_id = ? )
       ORDER BY
         name ASC';
 
