@@ -2,8 +2,6 @@
 This is a contact tracking site <br>
 Made with PHP, JavaScript, MySQL, HTML, CSS
 
-<br>
-
 RELEASE: Alpha Version.
 
 TODO: <br>
